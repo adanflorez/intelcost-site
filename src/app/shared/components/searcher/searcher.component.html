@@ -1,0 +1,14 @@
+<div class="card card-shadow">
+    <div class="card-body d-flex align-items-center">
+        <div class="card-container w-100">
+            <input class="form-control form-control-lg" type="text" placeholder="Buscar..." [(ngModel)]="wordToSearch">
+            <select class="custom-select custom-select-lg" [(ngModel)]="category">
+                <option selected value="">Seleccionar categoría</option>
+                <option *ngFor="let category of categoryList" value="{{ category.value }}">{{ category.text }}</option>
+            </select>
+            <button type="button" (click)="emitFilters()" class="btn btn-orange btn-lg">
+                Buscar
+            </button>
+        </div>
+    </div>
+</div>

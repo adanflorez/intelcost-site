@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/scss/card";
+@import "./assets/scss/buttons";
+
+.form-control:focus {
+    border-color: none;
+    outline: 0;
+    box-shadow: none;
+}

@@ -1,0 +1,10 @@
+.btn {
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+
+  &.btn-orange {
+    background-color: #f19539;
+    color: #fff;
+  }
+}
