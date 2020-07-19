@@ -19,6 +19,8 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@ngrx/store": "^9.2.0",
     "ng-lazyload-image": "^8.0.1",
     "ngx-bootstrap": "^5.6.1",
     "rxjs": "~6.4.0",

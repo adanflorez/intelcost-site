@@ -6,10 +6,7 @@
     </div>
     <div class="row">
         <div *ngFor="let image of images" class="col-lg-4">
-            <div class="card">
-                <img class="card-img-top" [defaultImage]="image.previewURL" [lazyLoad]="image.webformatURL"
-                    alt="Card image cap">
-            </div>
+            <app-image-card [image]="image"></app-image-card>
         </div>
     </div>
     <div class="row">

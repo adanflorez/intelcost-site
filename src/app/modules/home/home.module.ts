@@ -7,19 +7,17 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { SearchComponent } from './pages/search/search.component';
 
-import { LazyLoadImageModule } from 'ng-lazyload-image';
-
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ImageDetailComponent } from './pages/image-detail/image-detail.component';
 
 @NgModule({
-  declarations: [HomeComponent, SearchComponent],
+  declarations: [HomeComponent, SearchComponent, ImageDetailComponent],
   imports: [
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
     HomeRoutingModule,
     SharedModule,
-    LazyLoadImageModule,
     PaginationModule.forRoot()
   ]
 })

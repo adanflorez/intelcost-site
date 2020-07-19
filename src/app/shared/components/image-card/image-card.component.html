@@ -1,0 +1,10 @@
+<div class="imagebox">
+    <a routerLink="/image/{{image.id}}">
+        <img class="card-img-top" [defaultImage]="image.previewURL" [lazyLoad]="image.webformatURL"
+            alt="{{ image.webformatURL }}">
+        <span class="imagebox-desc">
+            <i class="far fa-heart mr-1"></i>{{ image.likes }}
+            <i class="far fa-comment-alt ml-2 mr-1"></i> {{ image.comments }}
+        </span>
+    </a>
+</div>

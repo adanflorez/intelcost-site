@@ -1,0 +1,41 @@
+.imagebox {
+  background: black;
+  padding: 0px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 24px;
+
+  img {
+    opacity: 1;
+    transition: 0.5s opacity;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .imagebox-desc {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 0px;
+    color: white;
+    font-size: 1.2em;
+    left: 0px;
+    padding: 10px 15px;
+    position: absolute;
+    transition: 0.5s padding;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    img {
+      opacity: 0.7;
+    }
+
+    .imagebox-desc {
+      padding-bottom: 5%;
+    }
+  }
+}
