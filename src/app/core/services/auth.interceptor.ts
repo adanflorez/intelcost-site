@@ -11,6 +11,11 @@ export class AuthInterceptor implements HttpInterceptor {
 
   constructor() { }
 
+  /**
+   * Interceptor: Key parameter added for all requests
+   * @param req request
+   * @param next next
+   */
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler
@@ -23,7 +28,7 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(cloned).pipe(
       retry(1),
       catchError((error: HttpErrorResponse) => {
-        console.log(error);
+        console.error(error);
         return throwError(error);
       })
     );

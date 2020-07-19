@@ -22,13 +22,24 @@ export class SearcherComponent implements OnInit {
 
   @Output() emitPage = new EventEmitter<number>();
 
+  /**
+   * Constructor
+   *
+   * @param router Router
+   */
   constructor(
     private router: Router,
   ) { }
 
+  /**
+   * Begin life cycle
+   */
   ngOnInit() {
   }
 
+  /**
+   * Navigate to the search page by sending the keyword and / or category parameters
+   */
   searchFilters() {
     this.router.navigate(['/search'], {
       queryParams: {
@@ -39,6 +50,11 @@ export class SearcherComponent implements OnInit {
     this.emitPage.emit(1);
   }
 
+  /**
+   * Lets you filter keywords by pressing enter
+   *
+   * @param e event
+   */
   search(e: any) {
     if (e.key === 'Enter') {
       this.searchFilters();

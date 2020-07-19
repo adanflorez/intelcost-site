@@ -12,6 +12,9 @@ export class ImageCardComponent implements OnInit {
 
   constructor() { }
 
+  /**
+   * Begin life cycle
+   */
   ngOnInit() {
   }
 

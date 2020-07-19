@@ -14,15 +14,30 @@ export class ImageDetailComponent implements OnInit {
   image: Image;
   loading = true;
 
+  /**
+   * Constructor
+   *
+   * @param searchService service to search images
+   * @param route Activated route to get parameters from url
+   */
   constructor(
     private searchService: SearchService,
     private route: ActivatedRoute
   ) { }
 
+  /**
+   * Begin life cycle
+   */
   ngOnInit() {
+    this.getDetail();
+  }
+
+  /**
+   * Consume service to bring detail of an image
+   */
+  getDetail() {
     this.imageId = this.route.snapshot.params.id;
     this.searchService.searchImageById(this.imageId).subscribe(res => {
-      console.log(res);
       this.image = res.hits[0];
       this.loading = false;
     }, err => {

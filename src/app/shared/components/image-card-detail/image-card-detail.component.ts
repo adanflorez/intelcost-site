@@ -9,10 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ImageCardDetailComponent implements OnInit {
 
   @Input() image: Image;
-  tags: any[];
 
   constructor() { }
 
+  /**
+   * Begin life cycle
+   */
   ngOnInit() {
   }
 
