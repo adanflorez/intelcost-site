@@ -12,7 +12,7 @@ export class SearchComponent implements OnInit {
 
   category: string;
   wordToSearch: string;
-  images: Image[];
+  images: Image[] = [];
   currentPage = 1;
   page: number;
   totalItems: number;
