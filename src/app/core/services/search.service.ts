@@ -1,6 +1,6 @@
 import { environment } from './../../../environments/environment.prod';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -14,7 +14,16 @@ export class SearchService {
     private http: HttpClient
   ) { }
 
-  searchImages(): Observable<any> {
-    return this.http.get(`${this.baseUrl}`);
+  searchImages(category: string, q: string, page: number = 1): Observable<any> {
+    const params = {};
+    params['per_page'] = 9;
+    params['page'] = page;
+    if (category) {
+      params['category'] = category;
+    }
+    if (q) {
+      params['q'] = q;
+    }
+    return this.http.get(this.baseUrl, { params });
   }
 }

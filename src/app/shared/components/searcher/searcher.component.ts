@@ -1,4 +1,3 @@
-import { SearchService } from './../../../core/services/search.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import Category from 'src/app/core/models/category.model';
@@ -23,24 +22,17 @@ export class SearcherComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private searchService: SearchService
   ) { }
 
   ngOnInit() {
   }
 
   emitFilters() {
-    /* this.router.navigate(['/'], {
+    this.router.navigate(['/search'], {
       queryParams: {
-        key: environment.key,
         q: this.wordToSearch,
         category: this.category === '' ? null : this.category,
       },
-    }); */
-    this.searchService.searchImages().subscribe(res => {
-      console.log(res);
-    }, err => {
-      console.error(err);
     });
   }
 
