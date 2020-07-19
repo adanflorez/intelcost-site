@@ -10,6 +10,7 @@ Run the following commands:
 
 - npm install
 - ng serve
+- Open http://localhost:4200/ in the browser
 
 ## Build
 
