@@ -16,6 +16,7 @@ export class SearchComponent implements OnInit {
   currentPage = 1;
   page: number;
   totalItems: number;
+  loading = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -36,13 +37,21 @@ export class SearchComponent implements OnInit {
   }
 
   loadImages() {
+    this.loading = true;
+    this.currentPage = this.page;
     this.searchService.searchImages(this.category, this.wordToSearch, this.page).subscribe(res => {
-      console.log(res);
       this.totalItems = res.total;
       this.images = res.hits;
+      this.loading = false;
     }, err => {
       console.error(err);
+      this.loading = false;
     });
+  }
+
+  gg(e: any) {
+    console.log(e);
+    this.page = e;
   }
 
 }

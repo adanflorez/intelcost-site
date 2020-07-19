@@ -1,0 +1,17 @@
+<div class="row mb-4" *ngIf="image">
+    <div class="col-lg-9">
+        <img class="img-full" [defaultImage]="image.previewURL" [lazyLoad]="image.webformatURL"
+            alt="{{ image.webformatURL }}">
+    </div>
+    <div class="col-lg-3">
+        <div class="tags d-inline-flex mb-2">
+            <div class="mr-1" *ngFor="let tag of image.tags.split(',')">
+                <span class="badge badge-primary">{{ tag }}</span>
+            </div>
+        </div>
+        <br>
+        <i class="far fa-heart mr-1"></i>{{ image.likes }}
+        <i class="far fa-comment-alt ml-2 mr-1"></i> {{ image.comments }}
+        <i class="far fa-eye ml-2 mr-1"></i> {{ image.views }}
+    </div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import Category from 'src/app/core/models/category.model';
 
@@ -20,6 +20,8 @@ export class SearcherComponent implements OnInit {
     { value: 'buildings', text: 'Edificios' }
   ];
 
+  @Output() emitPage = new EventEmitter<number>();
+
   constructor(
     private router: Router,
   ) { }
@@ -27,13 +29,20 @@ export class SearcherComponent implements OnInit {
   ngOnInit() {
   }
 
-  emitFilters() {
+  searchFilters() {
     this.router.navigate(['/search'], {
       queryParams: {
         q: this.wordToSearch,
         category: this.category === '' ? null : this.category,
       },
     });
+    this.emitPage.emit(1);
+  }
+
+  search(e: any) {
+    if (e.key === 'Enter') {
+      this.searchFilters();
+    }
   }
 
 }

@@ -1,3 +1,4 @@
+import { ImageDetailComponent } from './pages/image-detail/image-detail.component';
 import { SearchComponent } from './pages/search/search.component';
 import { HomeComponent } from './home.component';
 import { NgModule } from '@angular/core';
@@ -13,7 +14,8 @@ const routes: Routes = [
     component: SearchComponent
   },
   {
-    path: 'image/:id'
+    path: 'image/:id',
+    component: ImageDetailComponent
   }
 ];
 

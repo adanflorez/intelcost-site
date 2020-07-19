@@ -26,4 +26,8 @@ export class SearchService {
     }
     return this.http.get(this.baseUrl, { params });
   }
+
+  searchImageById(id: string): Observable<any> {
+    return this.http.get(this.baseUrl + '?id=' + id);
+  }
 }
