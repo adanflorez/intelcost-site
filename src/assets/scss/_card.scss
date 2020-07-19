@@ -1,0 +1,7 @@
+.card {
+  border: none;
+
+  &.card-shadow {
+    box-shadow: 0 4px 8px 0 rgba(64, 79, 84, 0.24);
+  }
+}
