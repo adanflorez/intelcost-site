@@ -1,7 +1,7 @@
 <div class="card card-shadow">
     <div class="card-body d-flex align-items-center">
         <div class="card-container w-100">
-            <input (keyup)="search($event)" class="form-control form-control-lg" type="text" placeholder="Buscar..."
+            <input (keyup)="search($event)" class="form-control form-control-lg" type="text" placeholder="Buscar imágenes..."
                 [(ngModel)]="wordToSearch">
             <select class="custom-select custom-select-lg" [(ngModel)]="category" (change)="searchFilters()">
                 <option selected value="">Seleccionar categoría</option>
