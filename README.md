@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run the following commands:
 
-- Download the repository <code> git clone </code>
+- Download the repository <code>git clone git@github.com:adanflorez/intelcost-site.git</code>
 - npm install
 - ng serve
 - Open http://localhost:4200/ in the browser
