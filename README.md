@@ -4,9 +4,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.2.
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run the following commands:
+
+- npm install
+- ng serve
 
 ## Build
 
@@ -18,3 +21,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 - ng-lazyload-image: "^8.0.1",
 - ngx-bootstrap: "^5.6.1",
 - ngx-loading: "^8.0.0",
+
+## Backend
+
+https://pixabay.com/api/
